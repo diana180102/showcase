@@ -1,0 +1,18 @@
+
+.containerPickers{
+    display: flex;
+    gap: 10px;
+}
+
+.btnPicker{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btnPicker img{
+    width: 24px;
+    height: 24px;
+
+}
+

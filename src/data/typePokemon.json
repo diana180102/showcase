@@ -1,0 +1,79 @@
+[
+        {
+			"name": "normal",
+			"color": "hsla(54, 20%, 58%, 1)"
+		},
+		{
+			"name": "fighting",
+			"color": "hsla(351, 70%, 45%, 1)"
+		},
+		{
+			"name": "flying",
+			"color": "hsla(255, 71%, 75%, 1)"
+		},
+		{
+			"name": "poison",
+			"color": "hsla(304, 45%, 44%, 1)"
+		},
+		{
+			"name": "ground",
+			"color": "hsla(45, 64%, 65%, 1)"
+		},
+		{
+			"name": "rock",
+			"color": "hsla(49, 58%, 45%, 1)"
+		},
+		{
+			"name": "bug",
+			"color": "hsla(66, 68%, 43%, 1)"
+		},
+		{
+			"name": "ghost",
+			"color": "hsla(263, 29%, 47%, 1)"
+		},
+		{
+			"name": "steel",
+			"color": "hsla(235, 21%, 77%, 1)"
+		},
+		{
+			"name": "fire",
+			"color": "hsla(23, 91%, 58%, 1)"
+		},
+		{
+			"name": "water",
+			"color": "hsla(219, 77%, 66%, 1)"
+		},
+		{
+			"name": "grass",
+			"color": "hsla(100, 56%, 54%, 1)"
+		},
+		{
+			"name": "electric",
+			"color": "hsla(47, 94%, 58%, 1)"
+		},
+		{
+			"name": "psychic",
+			"color":"hsla(343, 95%, 66%, 1)"
+		},
+		{
+			"name": "ice",
+			"color": "hsla(188, 52%, 74%, 1)"
+		},
+		{
+			"name": "dragon",
+			"color": "hsla(257, 100%, 61%, 1)"
+		},
+		{
+			"name": "dark",
+			"color": "hsla(16, 21%, 38%, 1)"
+		},
+		{
+			"name": "fairy",
+			"color": "hsla(348, 59%, 76%, 1)"
+		},
+		{
+			"name": "stellar",
+			"color": "hsla(0, 0%, 40%, 1)"
+		}
+	
+]

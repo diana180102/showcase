@@ -1,0 +1,33 @@
+.content{
+    background-color: hsla(210, 40%, 98%, 1);
+    border-radius: 16px;
+    display:  flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    
+    
+   
+}
+
+.content > h2{
+    color: hsla(222, 47%, 11%, 1);
+    font-size: 24px !important;
+}
+
+.container-cards{
+    display: flex;
+
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-exit{
+    background-color: transparent !important;
+    border: 1px solid hsla(221, 91%, 60%, 1) !important;
+    color: hsla(221, 91%, 60%, 1) !important;
+    cursor: pointer;
+}

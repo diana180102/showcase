@@ -1,0 +1,21 @@
+.containerTag{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tag{
+  background-color: hsla(221, 100%, 97%, 1) ;
+  border-radius: 11px;
+  padding: 1px 8px;
+  border: 1px  hsla(221, 95%, 93%, 1) solid;
+}
+
+
+
+.tag p{
+  font-size: 14px;
+ 
+}

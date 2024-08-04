@@ -1,0 +1,92 @@
+.side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+        
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.pokemonView{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.pokemon-image{
+  width: 140px;
+  height: 140px; 
+}
+
+.types-container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.containerStats{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.stats img{
+    width: 16px;
+    height: 16px;
+}
+
+.stats p{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.typeStat{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.typeStat > p{
+    color: hsla(215, 16%, 47%, 1);
+    font-size: 12px;
+}
+
+.divisor{
+   background-color: hsla(0, 0%, 88%, 1);
+   width: 1px;
+   height: 48px;
+
+}
+
+.btn-favorite{
+    background-color: hsla(0, 0%, 100%, 1) !important;
+    border: 1px solid hsla(221, 91%, 60%, 1) !important;
+    color: hsla(221, 91%, 60%, 1) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    cursor: pointer;
+    
+}
+
+.btn-favorite > img{
+    width: 24px;
+    height: 24px;
+}

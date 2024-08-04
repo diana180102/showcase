@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "language": "en",
+        "image": "src/assets/en.png"
+    },
+    {
+        "id":2,
+        "language": "es",
+        "image": "src/assets/es.png"
+    }
+    
+
+]

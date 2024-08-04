@@ -1,0 +1,36 @@
+header{
+    width: 100%;
+    background-color: hsla(221, 100%, 97%, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    width: 1280px;
+}
+
+.headerContainer h1{
+    color: hsla(222, 47%, 11%, 1);
+    font-size: 36px;
+}
+
+.containerNameProject{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border: 1px hsla(221, 76%, 48%, 1) solid ;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.nameProject{
+    color: hsla(221, 76%, 48%, 1);
+    font-weight: 700;
+}

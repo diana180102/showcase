@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.square{
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border: 1px hsla(213, 27%, 84%, 1) solid;
+    color: hsla(222, 47%, 11%, 1) ;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "Rubik Mono One", monospace;
+    
+}
+
+.match{
+    color: green;
+}

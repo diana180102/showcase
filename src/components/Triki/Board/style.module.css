@@ -1,0 +1,16 @@
+.status{
+  font-weight: 700; 
+  font-size: 36px;
+  color: hsla(222, 47%, 11%, 1);
+  margin-bottom: 16px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.board-row{
+    display: flex;
+}
