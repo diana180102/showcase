@@ -1,12 +1,64 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import style from "./style.module.css";
 import { PokemonContext } from "../../../context/ProviderPokemon";
+import { createFavorite } from "../../../services/favoritesPokemon";
+import { typeColors } from "../../../styles/typePokemon";
+
+
 
 function Side() {
     
     const pokemonRef = useRef();
-    const { setPokemonName, selectPokemon } = useContext(PokemonContext);
+    const { setPokemonName, selectPokemon, isFavorite, setIsFavorite, favoritesPokemon } = useContext(PokemonContext);
+    // console.log(selectPokemon);
+    console.log(favoritesPokemon);
+    
     const [loading, setLoading] = useState(false);
+
+    
+    
+
+    const favorites = favoritesPokemon.some(({ name }) => name === selectPokemon.name);
+    console.log(favorites);
+    
+   
+    useEffect(() => {
+      setIsFavorite(favorites);
+    }, [favorites, setIsFavorite]);
+
+    console.log(isFavorite);
+    
+    
+
+
+        
+   
+    
+    
+  
+    
+    
+    
+        
+    
+     
+    
+
+     function handleFavorite(e){
+        e.preventDefault();
+         
+          if(selectPokemon){
+            const pokemonFavorite = {
+                id: selectPokemon.id,
+                name: selectPokemon.name,
+                types:selectPokemon.types,
+                avatarUrl: selectPokemon.sprites.other["official-artwork"].front_default
+            }
+         createFavorite(pokemonFavorite);
+        
+    }
+        
+    }
 
     const handleSearch = async (e) => {
         e.preventDefault();
@@ -19,19 +71,19 @@ function Side() {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
-    console.log(selectPokemon);
+   
 
     return (
         <div className={style.side}>
             <form onSubmit={handleSearch} className={style.search}>
                 <input 
-                    className={style.input} 
+                    className="input"
                     type="text" 
                     ref={pokemonRef}
                     placeholder="Pokemon name" 
                 />
                 <button 
-                    className={style.btn}
+                    className="btn"
                 >
                     Search
                 </button>
@@ -48,9 +100,14 @@ function Side() {
                             src={selectPokemon.sprites.other["official-artwork"].front_default || "/path/to/placeholder-image.png"} 
                             alt={selectPokemon.name || 'Pokémon'} 
                         />
-                        <div className={style["types-container"]}>
+                        <div className={`${style["types-container"]} `} >
+                            
                             {selectPokemon.types?.map((type, index) => (
-                                <p key={index}>{capitalizeFirstLetter(type.type.name)}</p>
+                                <p 
+                                    key={index} 
+                                    style={{backgroundColor: typeColors[type.type.name]}  }>
+                                        {capitalizeFirstLetter(type.type.name)}
+                                </p>
                             )) || <p>Unknown</p>}
                         </div>
                         <div className={style.containerStats}>
@@ -64,7 +121,7 @@ function Side() {
                             <div className={style.divisor}></div>
                             <div className={style.typeStat}>
                                 <div className={style.stats}>
-                                    <img src="/src/assets/height.svg" alt="Height" />
+                                    <img src="/src/assets/heigth.svg" alt="Height" />
                                     <p>{(selectPokemon.height / 10) || 0} m</p>
                                 </div>
                                 <p>Height</p>
@@ -75,7 +132,7 @@ function Side() {
                     <p>No Pokémon selected</p>
                 )
             )}
-            <button className={`${style.btn} ${style["btn-favorite"]}`}>
+            <button className={`btn ${style["btn-favorite"]} ${isFavorite ? style.favorite : ''} `}  onClick={handleFavorite}>
                 <img src="/src/assets/favorite.svg" alt="Favorite" /> Add to Favorites
             </button>
         </div>

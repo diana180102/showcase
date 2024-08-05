@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import {getPokemon} from '../services/services';
+import { getFavorite } from "../services/favoritesPokemon";
 
 const PokemonContext = createContext({
     fetchPokemon: () => {},
@@ -11,8 +12,10 @@ function ProviderPokemon({children}) {
     
     const [pokemonName, setPokemonName] = useState('bulbasaur');
     const [username, setUsername] = useState('');
+    const [isFavorite, setIsFavorite] = useState(false);
     
     const [selectPokemon, setSelectPokemon] = useState([]);
+    const[favoritesPokemon, setFavoritesPokemon] = useState([]);
 
      useEffect(() => {
         const fetchPokemon = async () => {
@@ -28,11 +31,39 @@ function ProviderPokemon({children}) {
 
         fetchPokemon();
     }, [pokemonName]);
+     
+        
+     useEffect(() => {
+        
+        getFavorite()
+         .then(data => {
+            setFavoritesPokemon(data);
+         }).catch(error => console.error('Error fetching favorites:', error));
+            
+        
+
+    }, [username]);
+
+   
+     
+    
+
+    
+   
+    
+    
    
     
     
     return (
-        <PokemonContext.Provider value={{setPokemonName, selectPokemon, username, setUsername}}>
+        <PokemonContext.Provider value={{
+            setPokemonName, 
+            selectPokemon, 
+            username, 
+            setUsername, 
+            isFavorite, 
+            setIsFavorite,
+            favoritesPokemon }}>
             {children}
         </PokemonContext.Provider>
     )

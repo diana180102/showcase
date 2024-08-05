@@ -32,6 +32,12 @@
     gap: 8px;
 }
 
+.types-container p{
+    padding: 2px 8px;
+    color: white;
+    border-radius: 15px;
+}
+
 .containerStats{
     display: flex;
     flex-direction: row;
@@ -89,4 +95,8 @@
 .btn-favorite > img{
     width: 24px;
     height: 24px;
+}
+
+.favorite{
+    background-color: antiquewhite;
 }

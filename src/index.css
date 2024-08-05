@@ -66,6 +66,13 @@ h1 h2{
     font-weight: 400;
     font-size: 16px;
 }
+.input:focus{
+  font-family: "Nunito", sans-serif;
+}
+
+.input:not(:focus){
+  font-family: "Nunito", sans-serif;
+}
 
 .subtitle{
   color: hsla(222, 47%, 11%, 1);
