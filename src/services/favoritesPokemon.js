@@ -44,10 +44,37 @@ function createFavorite(body){
         body: JSON.stringify(body)
     }
 
-    handleResponse(options);
+    return handleResponse(options);
+}
+
+function removeFavorite(id) {
+const options = {method: 'DELETE', headers: {'User-Agent': 'insomnia/2023.5.8'}};
+
+return fetch(`${URL}/${id}`, options)
+  .then(response =>{
+     if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`);
+     }
+      
+      
+     return response.text();
+  })
+  .then(text =>{
+    return text ? JSON.parse(text) : {};
+  })
+  .then(data => {
+    console.log("remove", data);
+    return data;
+    
+  })
+  .catch(err => {
+      console.error('Failed to remove favorite:', err);
+      throw err; // Re-throw the error if you want to handle it elsewhere
+    });
 }
 
 export {
     createFavorite,
+    removeFavorite,
     getFavorite
 }

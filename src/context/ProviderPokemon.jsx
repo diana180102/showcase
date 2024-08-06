@@ -12,10 +12,10 @@ function ProviderPokemon({children}) {
     
     const [pokemonName, setPokemonName] = useState('bulbasaur');
     const [username, setUsername] = useState('');
-    const [isFavorite, setIsFavorite] = useState(false);
+    
     
     const [selectPokemon, setSelectPokemon] = useState([]);
-    const[favoritesPokemon, setFavoritesPokemon] = useState([]);
+    const [favoritesPokemon, setFavoritesPokemon] = useState([]);
 
      useEffect(() => {
         const fetchPokemon = async () => {
@@ -61,9 +61,8 @@ function ProviderPokemon({children}) {
             selectPokemon, 
             username, 
             setUsername, 
-            isFavorite, 
-            setIsFavorite,
-            favoritesPokemon }}>
+            favoritesPokemon,
+            setFavoritesPokemon }}>
             {children}
         </PokemonContext.Provider>
     )
