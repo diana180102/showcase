@@ -61,7 +61,8 @@ function Side() {
        .catch((error) => console.log(error));
     }
   }
-
+  
+  //Acción de busque de pokemon
   const handleSearch = async (e) => {
     e.preventDefault();
     setLoading(true);

@@ -4,12 +4,14 @@ import { useContext } from "react";
 import { PokemonContext } from "../../../context/ProviderPokemon";
 
 function Content() {
-  const { setUsername } = useContext(PokemonContext);
+  const { setUsername, favoritesPokemon } = useContext(PokemonContext);
 
   const exit = () => {
     setUsername("");
     localStorage.setItem("username", "");
   };
+
+ 
 
   return (
     <div className={style.content}>
@@ -24,7 +26,18 @@ function Content() {
         </button>
       </div>
       <div className={style["container-cards"]}>
-        <CardsPokemon />
+        {favoritesPokemon.map(pokemon =>(
+          <CardsPokemon 
+          key={pokemon.id} 
+          id={pokemon.id}
+          name={pokemon.name}
+          image={pokemon.avatarUrl}
+          types={pokemon.types}
+          />
+        ))
+          
+        }
+        
       </div>
     </div>
   );
