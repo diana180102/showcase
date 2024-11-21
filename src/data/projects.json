@@ -2,26 +2,15 @@
   {
     "id": 1,
     "name": "ReactDev Tic-Tac-Toe",
-    "image": "src/assets/triki.png",
+    "image": "/assets/triki.png",
     "tags": ["useState", "localStorage", "CSSModules", "useEffect"]
   },
   {
     "id": 2,
     "name": "Poke Collection",
-    "image": "src/assets/pokeapi.png",
-    "tags": ["useState", "localStorage", "CSSModules", "useEffect"]
-  },
-  {
-    "id": 3,
-    "name": "React Wordle",
-    "image": "src/assets/words.png",
-    "tags": ["useState", "localStorage", "CSSModules", "useEffect"]
-  },
-  {
-    "id": 4,
-    "name": "Video Feed",
-    "image": "src/assets/youtube.png",
+    "image": "/assets/pokeapi.png",
     "tags": ["useState", "localStorage", "CSSModules", "useEffect"]
   }
+ 
 
 ]

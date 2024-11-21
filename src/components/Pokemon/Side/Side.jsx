@@ -16,6 +16,9 @@ function Side() {
     setFavoritesPokemon,
   } = useContext(PokemonContext);
 
+  console.log(selectPokemon);
+  
+
   const [loading, setLoading] = useState(false);
 
   const isFavorite = favoritesPokemon.some(
@@ -23,7 +26,8 @@ function Side() {
   )
     ? true
     : false;
-
+  
+  //Remover favoritos
   function handleRemoveFavorite() {
     const favorites = favoritesPokemon.find(
       (f) => f.name === selectPokemon?.name
@@ -38,7 +42,8 @@ function Side() {
       })
       .catch((e) => console.log("No se ha podido eliminar" + e));
   }
-
+   
+   //agregar favoritos
   function handleFavorite(e) {
     e.preventDefault();
 

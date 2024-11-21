@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import { typeColors } from "../../../styles/typePokemon";
 
 // eslint-disable-next-line react/prop-types
-function CardsPokemon({ id, pokemonId, name, image, types }) {
+function CardsPokemon({ id,  name, image, types }) {
   let idType = useId();
   if (id < 10) {
     id = "#00" + id;
