@@ -117,7 +117,7 @@ function Side() {
           <div className={style.containerStats}>
             <div className={style.typeStat}>
               <div className={style.stats}>
-                <img src="/src/assets/weight.svg" alt="Weight" />
+                <img src="/assets/weight.svg" alt="Weight" />
                 <p>{selectPokemon.weight / 10 || 0} kg</p>
               </div>
               <p>Weight</p>
@@ -125,7 +125,7 @@ function Side() {
             <div className={style.divisor}></div>
             <div className={style.typeStat}>
               <div className={style.stats}>
-                <img src="/src/assets/heigth.svg" alt="Height" />
+                <img src="/assets/heigth.svg" alt="Height" />
                 <p>{selectPokemon.height / 10 || 0} m</p>
               </div>
               <p>Height</p>
@@ -142,8 +142,8 @@ function Side() {
         <img
           src={
             isFavorite
-              ? "/src/assets/isfavorite.svg"
-              : "/src/assets/favorite.svg"
+              ? "/assets/isfavorite.svg"
+              : "/assets/favorite.svg"
           }
           alt={isFavorite ? "Remove Favorite" : "Add to Favorites"}
         />

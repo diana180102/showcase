@@ -31,7 +31,7 @@ function Pokemon() {
   return (
     <div className="container">
       <div className={style.login}>
-        <img src="/src/assets/pokeapi.png" alt="pokemon" />
+        <img src="/assets/pokeapi.png" alt="pokemon" />
         <form className={style.form} onSubmit={handleSubmit}>
           <input
             className={`${"input"}`}
